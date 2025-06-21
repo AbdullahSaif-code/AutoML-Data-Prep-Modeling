@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler, MinMaxScaler, RobustScaler
@@ -18,7 +19,6 @@ def load_data(file, na_values=None, keep_default_na=True, encoding='utf-8'):
     Returns:
         pandas.DataFrame: Loaded data
     """
-    import os
     
     if hasattr(file, "name"):  # file-like object
         ext = os.path.splitext(file.name)[-1].lower()
