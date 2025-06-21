@@ -1,4 +1,4 @@
-Flask
+streamlit
 pandas
 scikit-learn
 numpy
