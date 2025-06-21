@@ -1,20 +1,18 @@
-# README for Stermlit Flask App
+# README for Streamlit AutoML Data Prep & Modeling App
 
 ## Overview
-The Stermlit Flask App is a web application designed to facilitate data preprocessing, model training, and model exportation using a user-friendly interface. This application leverages the Flask framework to provide a seamless experience for users looking to perform machine learning tasks.
+This Streamlit application provides an interactive interface for step-by-step data preprocessing, model training, and model export. It is designed for users who want to quickly prepare data and build machine learning models without writing code.
 
 ## Project Structure
 ```
-stermlit-flask-app
+AutoML-Data-Prep-Modeling
 ├── src
-│   ├── app.py               # Main entry point of the Flask application
-│   ├── preprocing.py        # Functions for data preprocessing
-│   ├── model-traning.py     # Model training functionalities
+│   ├── app.py               # Main Streamlit app
+│   ├── preprocessing.py     # Data preprocessing functions
+│   ├── model_training.py    # Model training functionalities
 │   ├── export.py            # Export trained models
-│   ├── templates
-│   │   └── index.html       # HTML template for the web UI
-│   └── static
-│       └── style.css        # CSS styles for the web application
+│   ├── config.toml          # Configuration file
+│   └── __pycache__/         # Python cache files
 ├── requirements.txt         # List of dependencies
 └── README.md                # Documentation for the project
 ```
@@ -22,8 +20,8 @@ stermlit-flask-app
 ## Setup Instructions
 1. Clone the repository:
    ```
-   git clone <repository-url>
-   cd stermlit-flask-app
+   git clone https://github.com/AbdullahSaif-code/AutoML-Data-Prep-Modeling.git
+   cd AutoML-Data-Prep-Modeling
    ```
 
 2. Create a virtual environment:
@@ -47,20 +45,20 @@ stermlit-flask-app
    ```
 
 ## Usage
-1. Run the Flask application:
+1. Run the Streamlit application:
    ```
-   python src/app.py
+   streamlit run src/app.py
    ```
 
-2. Open your web browser and navigate to `http://127.0.0.1:5000` to access the application.
+2. The app will open in your default web browser, or you can navigate to the URL shown in the terminal (usually `http://localhost:8501`).
 
 ## Features
-- **Data Preprocessing**: Load datasets, view data summaries, handle null values, and apply encoding.
-- **Model Training**: Select features and target variables, choose problem types, and evaluate model performance.
-- **Model Export**: Export trained models in various formats as per user requirements.
+- **Data Preprocessing**: Upload datasets, view data summaries, handle null values, change data types, and apply encoding.
+- **Model Training**: Select features and target variables, choose problem types (classification/regression), train models, and view evaluation metrics.
+- **Model Export**: Export trained models in `joblib` or `pickle` format and download processed data.
 
 ## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
